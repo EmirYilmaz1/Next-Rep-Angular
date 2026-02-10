@@ -1,0 +1,30 @@
+<h2 mat-dialog-title>Add Workout</h2>
+
+<div mat-dialog-content>
+
+  <mat-form-field appearance="fill" style="width:100%">
+    <mat-label>Name</mat-label>
+    <input matInput [(ngModel)]="workout.name" cdkFocusInitial />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" style="width:100%">
+    <mat-label>Description</mat-label>
+    <textarea matInput rows="3" [(ngModel)]="workout.description"></textarea>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" style="width:100%">
+    <mat-label>Type (number)</mat-label>
+    <input matInput type="number" [(ngModel)]="workout.type" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" style="width:100%">
+    <mat-label>Duration (minutes)</mat-label>
+    <input matInput type="number" [(ngModel)]="workout.durationMinutes" />
+  </mat-form-field>
+
+</div>
+
+<div mat-dialog-actions align="end">
+  <button mat-button (click)="cancel()">Cancel</button>
+  <button mat-raised-button color="primary" (click)="save()">Save</button>
+</div>

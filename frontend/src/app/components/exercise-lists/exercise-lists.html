@@ -1,0 +1,35 @@
+<div class="list">
+  <ng-container *ngIf="exercises.length>0 ; else noExercises">
+    <div *ngFor="let exercise of exercises">
+      <div class="e_w" (click)="openDialog(exercise)">
+
+
+          <img src="../../../pictures/silownia-jelenia-gora-scaled.webp"
+              alt="Default Asign Gym Picture"
+              width="300px"
+              height="200px">
+
+        <div class = "w_t">
+        <p>{{ exercise.name }}</p>
+        <p>{{ exercise.muscle_group_name}}</p>
+        </div>
+
+        
+        <ng-container *ngIf="isInRole([1]);" >
+        <button 
+        class="delete-btn"
+        (click)="deleteExercise(exercise.exercise_id); $event.stopPropagation()">
+        Delete
+      </button>
+      </ng-container>
+
+
+      </div>
+    </div>
+  </ng-container>
+
+
+  <ng-template #noExercises let-data="data">
+    <h2>There arent any avaliable exercises</h2>
+  </ng-template>
+</div>

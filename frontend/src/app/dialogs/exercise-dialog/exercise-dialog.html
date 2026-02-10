@@ -1,0 +1,34 @@
+<div class="mat-dialog-title">
+  {{ data.row.name }}
+</div>
+
+<div class="mat-dialog-content exercise-dialog-content">
+
+  <div class="image-box">
+    <img
+      [src]="data.row.picture || '../../../pictures/silownia-jelenia-gora-scaled.webp'">
+  </div>
+
+  <div class="info-box">
+    <div class="info-row">
+      <span class="label">Muscle</span>
+      <span class="value">{{ data.row.muscle_group_name }}</span>
+    </div>
+
+    <div class="info-row">
+      <span class="label">Name</span>
+      <span class="value">{{ data.row.name }}</span>
+    </div>
+
+    <div class="info-row">
+      <span class="label">Description</span>
+      <span class="value">{{ data.row.description }}</span>
+    </div>
+  </div>
+
+</div>
+
+<div mat-dialog-actions align="end">
+  <button mat-stroked-button mat-dialog-close>Close</button>
+</div>
+

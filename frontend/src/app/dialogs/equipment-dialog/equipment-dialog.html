@@ -1,0 +1,10 @@
+<div class="mat-dialog-title">New equipment</div>
+
+<div class="mat-dialog-content">
+  <equipment-form (validChange)="onFormValidChange($event)"></equipment-form>
+</div>
+
+<div mat-dialog-actions>
+  <button mat-stroked-button mat-dialog-close>Cancel</button>
+  <button mat-raised-button color="primary" [disabled]="!formValid" (click)="onAdd()">Add</button>
+</div>

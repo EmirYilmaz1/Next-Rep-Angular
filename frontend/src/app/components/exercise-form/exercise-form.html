@@ -1,0 +1,43 @@
+<form [formGroup]="form">
+
+  <h3>Add Exercise</h3>
+
+  <div>
+    <label>Name:</label><br>
+    <input formControlName="name" />
+  </div>
+
+  <br>
+
+  <div>
+    <label>Description:</label><br>
+    <textarea formControlName="description"></textarea>
+  </div>
+
+  <br>
+
+  <div>
+    <label>Muscle Group Name:</label><br>
+    <input formControlName="muscle_group_name" />
+  </div>
+
+  <br>
+
+  <div>
+    <label>Equipment Name:</label><br>
+    <input formControlName="equipment_name" />
+  </div>
+
+  <br>
+
+  <div>
+    <label>Muscle Group ID:</label><br>
+    <input type="number" formControlName="MUSCLE_GROUP_id" />
+  </div>
+
+  <br>
+
+  <div>
+    <label>Equipment ID:</label><br>
+    <input type="number" formControlName="EQUIPMENT_equipment_id" />
+  </div>

@@ -1,0 +1,28 @@
+  <ng-container *ngIf="workouts.length>0 ; else NW">
+    <div class="list">
+     <div *ngFor="let workout of workouts">
+    <div div class="e_w" (click)="openWorkoutDialog(workout)">
+                 <img src="../../../pictures/silownia-jelenia-gora-scaled.webp"
+              alt="Default Asign Gym Picture"
+              width="300px"
+              height="200px">
+
+        {{ workout.name }}
+
+        <ng-container *ngIf="isInRole([1]);" >
+        <button 
+        class="delete-btn"
+        (click)="deleteWorkout(workout.workout_id); $event.stopPropagation()">
+        Delete
+      </button>
+      </ng-container>
+
+    </div>
+    </div>
+    </div>
+  </ng-container>
+
+  <ng-template #NW>
+    <p>NO WORKOUT</p>
+  </ng-template>
+  

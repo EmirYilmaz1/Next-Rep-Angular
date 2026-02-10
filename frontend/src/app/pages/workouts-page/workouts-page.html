@@ -1,0 +1,7 @@
+<header>
+    <h1>WORKOUTS</h1>
+    <ng-container *ngIf="isInRole([1])">
+        <button mat-raised-button color="primary" (click)="openAddDialog()">Add Workout</button>
+    </ng-container>
+</header>
+<app-workouts-list></app-workouts-list>

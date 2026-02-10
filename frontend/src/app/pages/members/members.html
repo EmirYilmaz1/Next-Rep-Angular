@@ -1,0 +1,13 @@
+<ng-container *ngIf="members_.length>0 else t">
+       <span class="titles"> <h2>Names</h2> <h2>User Name</h2> <h2>Role</h2></span>
+        <div *ngFor="let member of members_" >
+            <span class="member" (click)="openMembersDialog(member)">
+            <p>{{member.name}} {{member.surname}}</p>  <p> {{member.username}} </p> <p> {{member.role_name}} </p>
+            </span> 
+            <br>
+        </div>
+</ng-container>
+
+<ng-template #t>
+    No members
+</ng-template>

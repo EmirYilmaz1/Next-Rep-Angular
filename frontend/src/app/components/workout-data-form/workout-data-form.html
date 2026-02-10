@@ -1,0 +1,46 @@
+<form [formGroup]="form">
+  <h3>Add Exercise</h3>
+
+  <div>
+    <label>Duration:</label><br />
+    <input type="number" formControlName="durationMinutes" />
+  </div>
+
+  <div>
+    <label>Notes:</label><br />
+    <input type="text" formControlName="notes" />
+  </div>
+
+  <div>
+    <label>Date:</label><br />
+    <input type="date" formControlName="date" />
+  </div>
+
+  <hr />
+
+  <div formArrayName="exercises">
+    <div
+      *ngFor="let exCtrl of exercisesFA.controls; let exIdx = index; trackBy: trackByIndex"
+      [formGroupName]="exIdx"
+    >
+      <p><b>{{ exCtrl.get('name')?.value }}</b></p>
+
+      <div formArrayName="logs">
+        <div
+          *ngFor="let setCtrl of logsFA(exIdx).controls; let setIdx = index; trackBy: trackByIndex"
+          [formGroupName]="setIdx"
+        >
+          <p>Set {{ setIdx + 1 }}</p>
+
+          <label>Weight:</label>
+          <input type="number" formControlName="weight" />
+
+          <label>Reps:</label>
+          <input type="number" formControlName="reps" />
+        </div>
+      </div>
+
+      <hr />
+    </div>
+  </div>
+</form>

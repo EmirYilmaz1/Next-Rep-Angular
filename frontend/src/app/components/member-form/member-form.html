@@ -1,0 +1,29 @@
+<form [formGroup]="form">
+  <mat-card>
+    <mat-card-content class="form-container">
+
+      <div class="row">
+        <div class="meta" *ngIf="row">
+          <div><b>User:</b> {{ row.username || '-' }}</div>
+          <div><b>Name:</b> {{ row.name }} {{ row.surname }}</div>
+          <div><b>Current role:</b> {{ row.role_name }}</div>
+        </div>
+
+        <mat-form-field appearance="outline" class="w-full">
+          <mat-label>Role</mat-label>
+
+          <mat-select formControlName="ROLE_role_id" required>
+            @for (r of roleOptions; track r.id) {
+              <mat-option [value]="r.id">{{ r.name }}</mat-option>
+            }
+          </mat-select>
+
+          @if (form.get('ROLE_role_id')?.invalid) {
+            <mat-error>Role is required</mat-error>
+          }
+        </mat-form-field>
+      </div>
+
+    </mat-card-content>
+  </mat-card>
+</form>

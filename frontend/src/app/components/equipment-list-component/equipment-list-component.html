@@ -1,0 +1,17 @@
+<h1>Equipments</h1>
+
+<ng-container *ngIf="equipments.length>0 ; else  t">
+
+    <ul>
+        <li *ngFor="let equipment of equipments">
+            {{equipment.name}} -  {{equipment.description}}
+           
+    <button mat-button color="warn" (click)="deleteEquipment(equipment.equipment_id)">Delete</button>
+        </li>
+    </ul>
+
+</ng-container>
+
+<ng-template #t>
+
+</ng-template>

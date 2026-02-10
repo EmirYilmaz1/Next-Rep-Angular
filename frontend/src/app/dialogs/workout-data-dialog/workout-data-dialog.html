@@ -1,0 +1,7 @@
+<h2 mat-dialog-title>Add Workout</h2> 
+<div class="mat-dialog-content workout-dialog-content"> 
+<app-workout-data-form #formComp [workout_e]="workout_e"> 
+
+</app-workout-data-form> </div> <div mat-dialog-actions > 
+<button mat-raised-button color="primary" (click)="onSubmit(formComp)"> Send </button> 
+</div>

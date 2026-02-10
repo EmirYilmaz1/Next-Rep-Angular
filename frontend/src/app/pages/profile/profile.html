@@ -1,0 +1,57 @@
+<h1>Profile</h1>
+
+<div *ngIf="errorMsg" class="error">{{ errorMsg }}</div>
+
+
+<div *ngIf="!editMode && person as p" class="profile-card">
+  <p><b>Username:</b>  {{ p.username }}</p>
+  <p><b>Name: </b>  {{ p.name }} {{ p.surname }}</p>
+  <p><b>Email: </b>  {{ p.email }}</p>
+  <p><b>Weight: </b> {{ p.userWeightKilograms }} kg</p>
+  <p><b>Height:</b> {{ p.userHeightCentimeters }} cm</p>
+  <p><b>Role: </b> {{ p.role_name }}</p>
+
+  <button (click)="startEdit()">Edit</button>
+</div>
+
+
+<form *ngIf="editMode" class="profile-card">
+
+  <label>
+    Username
+    <input [(ngModel)]="form.username" name="username">
+  </label>
+
+  <label>
+    Name
+    <input [(ngModel)]="form.name" name="name">
+  </label>
+
+  <label>
+    Surname
+    <input [(ngModel)]="form.surname" name="surname">
+  </label>
+
+  <label>
+    Email
+    <input [(ngModel)]="form.email" name="email">
+  </label>
+
+  <label>
+    Weight
+    <input type="number" [(ngModel)]="form.userWeightKilograms" name="weight">
+  </label>
+
+  <label>
+    Height
+    <input type="number" [(ngModel)]="form.userHeightCentimeters" name="height">
+  </label>
+
+  <div class="actions">
+    <button type="button" (click)="cancelEdit()">Cancel</button>
+    <button type="button" (click)="save()" [disabled]="saving">Save</button>
+  </div>
+
+</form>
+
+<a href="https://drive.google.com/drive/folders/1zTI1J4m0IS73UHPTzfAi8EzkvSvlhGTH">Please click here to see our documentation</a>

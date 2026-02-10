@@ -1,0 +1,19 @@
+<ng-container *ngIf="histories.length>0" else >
+    <h1>History</h1>
+    <div class="headers">
+        <h2>Names</h2>  <h2>Dates</h2>  <h2>Notes</h2>  
+    </div>
+    <div class="list">
+        <div *ngFor="let history of histories" class="history">
+        
+            <b>{{history.workout_name}}</b> 
+            <b>{{history.date}}</b> 
+            <b>{{history.notes}}</b>     
+            
+        </div>
+    </div>
+</ng-container>
+
+<ng-template>
+
+</ng-template>

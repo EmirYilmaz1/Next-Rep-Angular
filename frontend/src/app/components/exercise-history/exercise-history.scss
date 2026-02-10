@@ -1,0 +1,39 @@
+h1
+{
+  width: 100%;
+  border-bottom: 3px solid #466365;
+  padding-bottom: 0.5rem;
+}
+
+.headers {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 2px solid  #466365;
+  font-weight: bold;
+}
+
+
+.history
+{
+  display: flex;
+  justify-content: space-around;
+  border: 2px solid   #466365;
+  font-size: 1.5rem;
+  border-radius: 1rem;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.history:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+.list
+{
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 2rem;
+}
+

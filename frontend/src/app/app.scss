@@ -1,0 +1,77 @@
+
+.app-toolbar {
+  position: fixed;       
+  top: 0;
+  left: 0;
+  height: 100vh;         
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 8px;
+  background: #466365;
+  box-shadow: 2px 0 6px black;
+  z-index: 1000;
+}
+
+
+.router-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  
+}
+
+
+button.mat-mdc-button.active-link 
+{
+  color:#FFCC00;
+  border-radius: 0 !important;
+  border-left: 4px solid rgb(255, 255, 255) !important;
+}
+
+button
+{
+  
+}
+
+/* Sayfa içeriği */
+.content {
+  margin-left: 150px; 
+  padding: 16px;
+}
+
+.router-links {
+  display: flex;
+  flex-direction: column; 
+  gap: 8px;
+}
+
+
+.app-title {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.content {
+  padding: 16px;
+}
+
+button.mat-mdc-button.active-link {
+  border-radius: 0 !important;
+  border-bottom: 1px solid black !important;
+}
+
+.general-error {
+  display: inline-flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: red;
+  color: white;
+  border-radius: 4px;
+}
+

@@ -1,0 +1,51 @@
+<div class="mat-dialog-title">
+  {{ workout_e.name }}
+</div>
+
+<div class="mat-dialog-content workout-dialog-content">
+
+  <div class="info-box">
+    <div class="info-row">
+      <span class="label">Type</span>
+      <span class="value">{{workout_e.type}}</span>
+    </div>
+
+    <div class="info-row">
+      <span class="label">Description</span>
+      <span class="value">{{workout_e.description}}</span>
+    </div>
+
+    <div class="info-row">
+      <span class="label">Duration</span>
+      <span class="value">{{workout_e.durationMinutes }} minutes</span>
+    </div>
+  </div>
+
+     <div class="info-row">
+      <button (click)="openWorkoutDataDialog(workout_e)">Add</button>
+    </div>
+  </div>
+
+ <h3>Exercises in this Workout</h3>
+
+ <ng-container if.>
+
+ </ng-container>
+<div class="exercise-list">
+  <div *ngFor="let exercise of workout_e?.exercises" class="exercise-item" (click)="openExerciseDialog(exercise)">
+    <div> <span class="title">Name:</span> {{exercise.name }}</div>
+    <div> <span class="title">Muscle:</span> {{ exercise.muscle_group_name }}</div>
+    <div> <span class="title">Sets:</span> {{ exercise.plannedSets }}</div>
+    <div> <span class="title">Reps:</span> {{ exercise.plannedReps }}</div>
+    <div> <span class="title">Weight:</span> {{ exercise.plannedWeight}}</div>
+
+    <div>{{exercise.description}}</div>
+
+
+
+  </div>
+</div>
+
+<div mat-dialog-actions align="end">
+  <button mat-stroked-button mat-dialog-close (click)="close()">Close</button>
+</div>

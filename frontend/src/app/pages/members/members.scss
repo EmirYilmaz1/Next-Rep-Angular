@@ -1,0 +1,36 @@
+html
+{
+    box-sizing: border-box;
+    width: 100%;
+
+}
+.titles
+{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #466365;
+    margin-bottom: 1rem;
+
+}
+
+div
+{
+    box-sizing: border-box;
+
+}
+.member
+{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+
+    border: 2px solid black;
+    border-radius: 1rem;
+}
+.member:hover
+{
+    font-size: 1.2rem;
+    color: #FFCC00;
+    border: 2px  solid purple;
+    background-color: #466365;
+}

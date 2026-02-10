@@ -1,4 +1,28 @@
 # Web Application Development
+🏋️ Next Rep
+
+Next Rep is a fitness tracking application developed as part of a university course project.
+This repository contains the frontend (client-side) implementation built with Angular.
+
+The application is designed to help users track their workouts, manage sets and repetitions, and monitor their training progress through a simple and user-friendly interface.
+
+⸻
+
+🎓 Project Scope
+	•	📚 Developed as an academic project
+	•	💻 Frontend implemented using Angular
+	•	🔗 Designed to communicate with a backend via RESTful APIs
+
+⸻
+
+🚀 Features
+	•	📝 Workout and exercise listing
+	•	🔢 Display of sets and repetitions
+	•	📈 Structure suitable for progress tracking
+	•	🎨 Clean and user-focused UI
+	•	⚡ Component-based architecture
+
+
 ## version "continuous"
 
 #### Install Angular (v20) tools
